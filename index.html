@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div id="mensaje"></div>
+    <form id="formulario" method="post" action="#">
+        <fieldset>
+            <legend>Informacion Personal</legend>
+            <ul>
+                <li>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Juanito Jesus" required>
+                </li>
+                <li><hr>
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" id="apellidos" placeholder="Perez Martinez" required>
+                </li>
+                <li><hr>
+                    <label for="rut">RUT</label>
+                    <input type="text" id="rut" placeholder="12345678-9" required>
+                    <div id="verifRUT"></div>
+                </li>
+                <li><hr>
+                    <label for="mail">Correo electronico</label>
+                    <input type="mail" id="mail" placeholder="ejemplo@dominio.com" required>
+                </li>
+                <li><hr>
+                    <label for="cel">Teléfono Movil</label>
+                    <input type="number" id="cel" placeholder="123456789" required>
+                    <div id="verifFono"></div>
+                </li>
+                <li><hr>
+                    <label for="checklist">Elija 1 o más lenguajes de su interes</label>
+
+                    <div id="checklist">
+                        <input type="checkbox" name="lenguaje" value="Python">Python</input>
+                        <input type="checkbox" name="lenguaje" value="Java">Java</input>
+                        <input type="checkbox" name="lenguaje" value="TypeScript">TypeScript</input>
+                        <input type="checkbox" name="lenguaje" value="PHP">PHP</input>
+                        <input type="checkbox" name="lenguaje" value="C#">C#</input>
+                        <input type="checkbox" name="lenguaje" value="C++">C++</input>
+                        <div id="alerta"></div>
+                    </div>
+                    
+                    
+                </li>
+                <hr>
+                <label for="nivel">Conocimiento de Programacion</label>
+                <input type="range" id="range" min="0" max="100">
+                <hr>
+               <li id="exp">
+                    <div>
+                        <label for="experiencia">Indique años de experiencia:</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="experiencia" name="año" value="1" required>1 año</input>
+                        <input type="radio" id="experiencia" name="año" value="2">2 años</input>
+                        <input type="radio" id="experiencia" name="año" value="3">3 años</input>
+                        <input type="radio" id="experiencia" name="año" value="4">4 años</input>
+                        <input type="radio" id="experiencia" name="año" value="5">5 años</input>
+                    </div>
+
+                </li>
+
+                <li><hr>
+                    <label for="descripcion">Ingrese una breve descripcion acerca de usted:</label>
+                    <textarea placeholder="Intereses, gustos, aficiones." id="descripcion" required></textarea>
+                    <div id="verifDESC">Máx. 300 caracateres</div>
+                <li>
+                    <button type="submit" id="botonEnviar">Enviar</button>
+                    <input type="reset" id="limpiar" value="Limpiar">
+                </li>
+            
+
+            </ul>
+        </fieldset>
+    </form>
+
+    <script src="/js/validaciones.js" async defer></script>
+</body>
+</html>
